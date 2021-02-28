@@ -1,32 +1,77 @@
 header {
-    height: 100vh;
-    overflow-y: hidden;
+    padding-top: 20px;
+}
 
-    background:
-    linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-    url(../assets/header-image.jpg);
-    background-size: cover;
-    background-position: center;
-
-    position: relative;
-    padding-bottom: 115px;
+nav {
+    font-family: $primaryFont;
+    height: 75px;
+    padding: 15px 0;
+    border-bottom: 2px solid $lightTeal;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    align-items: flex-end;
     
-    .flex-container{
+    ul{
         display: flex;
-        align-items: flex-start;
-        margin-top: 115px;
-        
-        h1 {
-            margin-top: 0;
-            width: 25%;
+        li {
+            padding-left: 20px;
         }
-        
-        .img-container {
-            width: 50%;
+    }
+
+    img {
+        width: 5%;
+        min-width: 50px;
+    }
+    
+    li {
+        position: relative;
+        .subMenu {
+            background-color: $lightTeal;
+            color: white;
+            line-height: 2rem;
+            display: flex;
+            flex-direction: column;
             position: absolute;
+            overflow: hidden;
+            padding: 10px;
+            top: -350px;
             right: 0;
-            top: 205px;
         }
+    }
+
+    .mainMenu li:hover .subMenu,
+	.mainMenu li:focus-within .subMenu {
+		height: auto;
+        top: 25px;
+	}
+
+    .subMenu li:hover {
+        color: $gatewayTeal;
     }
 }
 
+.introFlex {
+    background: $gatewayTeal;
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    margin-bottom: 50px;
+    h1{
+        font-size: 4.5rem;
+        line-height: 5rem;
+        letter-spacing: 0.08rem;
+        text-align: right;
+        padding-right: 30px;
+        flex: 35%;
+    }
+    .introEx {
+        flex: 65%;
+        padding-left: 30px;
+        border-left: 2px solid white;
+        h2 {
+            font-size: 3.5rem;
+            font-style: italic;
+        }
+    }
+}

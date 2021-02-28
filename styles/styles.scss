@@ -1,65 +1,56 @@
-@import './partials/reset';
-@import './partials/typography';
-@import './partials/header';
-@import './partials/home';
-@import './partials/blog';
-@import './partials/contact';
-@import './partials/responsive';
+@import 'partials/setup';
+@import 'partials/variables';
+@import 'partials/header';
+@import 'partials/main';
+@import 'partials/responsive';
 
 * {
-    transition: 250ms all;
+    border: 1px solid coral;
 }
 
-body, body > * {
-    overflow-x: hidden;
+body {
+    color: $darkGrey;
+    font-family: $bodyFont;
+    font-size: 1.3rem;   
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+    padding: none;
+    margin: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .wrapper {
-    max-width: 1500px;
-    width: 83%;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $primaryFont;
     margin: 0 auto;
 }
 
-.img-container img {
-    width: 100%;
-}
-
-// elements that are intended to be hidden offscreen
-.offscreen {
-    position: absolute;
-    right: -200vw;
-    transition: right 1s;
+p {
+    line-height: 1.8rem;
 }
 
 nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-top: 20px;
-    overflow: hidden;
-    position: relative;
-
-    ul {
-        display: flex;
-        justify-content: space-between;
-        margin: 0;
-        right: 0;
-        transition: right 1s;
-        
-        a {
-            padding: 2vw;
-            
-            &:hover {
-                color: $light-blue;
-            }
-        }
-    }
-
-    i {
-        width: max-content;
-        height: max-content;
-        font-size: 3rem;
-        right: 0;
-        transition: right 1s;
+    a, li {
+        font-size: 1.5rem;
+        text-align: right;
     }
 }
