@@ -266,6 +266,7 @@ html {
 
 header {
   padding-top: 20px;
+  overflow-x: hidden;
 }
 
 nav {
@@ -286,9 +287,6 @@ nav .mainMenu {
 }
 nav .mainMenu li {
   padding-left: 20px;
-}
-nav .mainMenu label li {
-  overflow: hidden;
 }
 nav .subMenu {
   background-color: #82aaaa;
@@ -348,6 +346,12 @@ nav input[type=checkbox] {
 .introFlex .introEx h2 {
   font-size: 3.5rem;
   font-style: italic;
+}
+.introFlex .introEx ul {
+  list-style: square;
+}
+.introFlex .introEx strong {
+  color: #82aaaa;
 }
 
 .cardPrevCont {
@@ -540,7 +544,6 @@ body {
   background: white;
   font-family: "Roboto", sans-serif;
   font-size: 1.3rem;
-  overflow-x: hidden;
 }
 
 img {
